@@ -14,3 +14,11 @@ console.log(person.age);
 console.log(person.location);
 
 //calls data seperatly
+
+//call object keys
+
+console.log(Object.keys(person));
+
+//call object values
+
+console.log(Object.values(person));
