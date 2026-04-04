@@ -1,25 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Weather App</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
-        <h1 id="heading">Weather App</h1>
-        <form action="" class="input">
-        <input type="text" id="inputvalue" placeholder="Enter city name" />
-        <button type="submit" value="submit">Search</button>
-        </form>
-        <div id="weatherResult" class="card">
-            <p class="cityName"></p>
-            <p class="temperature"></p>
-            <p class="description"></p>
-            <p class="windspeed"></p>
-        </div>
+
+<!-- 🎥 Background Video -->
+<video autoplay muted loop id="bgVideo">
+    <source src="bg.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+
+    <h1 id="heading">🌤 Weather App</h1>
+
+    <form class="input">
+        <input type="text" id="inputvalue" placeholder="Enter city name..." />
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="weatherResult" class="card">
+        <p>Search a city to see weather 🌍</p>
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>

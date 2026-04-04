@@ -1,34 +1,41 @@
 const form = document.querySelector(".input");
 const input = document.querySelector("#inputvalue");
+const result = document.getElementById("weatherResult");
 
-const cityName = document.querySelector(".cityName");
-const temperature = document.querySelector(".temperature");
-const description = document.querySelector(".description");
-const windspeed = document.querySelector(".windspeed");
+const apiKey = "dbf5373dc7cc45438a7171627262903"; // please use your own api key
 
 form.addEventListener("submit", getWeather);
 
 function getWeather(event) {
   event.preventDefault();
 
-  const city = input.value; // user input
+  const city = input.value.trim();
 
-  const apiKey = "dbf5373dc7cc45438a7171627262903";
+  if (city === "") {
+    result.innerHTML = `<p style="color:yellow;">⚠️ Enter a city name</p>`;
+    return;
+  }
 
   fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
+
+      // ❌ City not found
       if (data.error) {
-        cityName.textContent = "City not found. Please try again.";
-      } else {
-        cityName.textContent = "City: " + data.location.name;
-        temperature.textContent = "Temp: " + data.current.temp_c + "°C";
-        description.textContent = "Condition: " + data.current.condition.text;
-        windspeed.textContent = "Wind: " + data.current.wind_kph + " kph";
+        result.innerHTML = `<p style="color:red;">❌ City not found</p>`;
+        return;
       }
+
+      // ✅ Show weather
+      result.innerHTML = `
+        <p><strong>${data.location.name}, ${data.location.country}</strong></p>
+        <p>🌡 Temp: ${data.current.temp_c}°C</p>
+        <p>🌤 ${data.current.condition.text}</p>
+        <p>💨 Wind: ${data.current.wind_kph} kph</p>
+        <img src="https:${data.current.condition.icon}" />
+      `;
     })
-    .catch(error => {
-      console.log("Error:", error);
+    .catch(() => {
+      result.innerHTML = `<p style="color:red;">⚠️ Error fetching data</p>`;
     });
 }
-
