@@ -22,7 +22,7 @@ function getWeather(event) {
 
       // ❌ City not found
       if (data.error) {
-        result.innerHTML = `<p style="color:red;">❌ City not found</p>`;
+        result.innerHTML = `<p>❌ City not found</p>`;
         return;
       }
 
@@ -32,7 +32,6 @@ function getWeather(event) {
         <p>🌡 Temp: ${data.current.temp_c}°C</p>
         <p>🌤 ${data.current.condition.text}</p>
         <p>💨 Wind: ${data.current.wind_kph} kph</p>
-        <img src="https:${data.current.condition.icon}" />
       `;
     })
     .catch(() => {
