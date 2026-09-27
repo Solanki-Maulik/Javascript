@@ -1,0 +1,72 @@
+:root{
+    --phonepe-purple:#6c20bd;
+    --phonepe-light-purple:#9855be;
+    --phonepe-light-dark:#220e38;
+}  
+
+body{
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-container{
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    position:reltive;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+.phonepe-header{
+    background-color: var(--phonepe-purple);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.icon-box{
+    width:52px;
+    height:52px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px auto;
+    font-size: 1.25rem;
+    transition: transform 0.15s ease , background-color 0.15s ease;
+}
+
+.icon-box:hover{
+    transform: scale(1.1);
+    background-color: var(--phonepe-light-purple);
+    color: white;
+}
+
+.action-btn small{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color:#444;
+    display:block;
+    line-height: 1.2;
+}
+
+.bottom-nav{
+   max-width: 480px;
+   margin: 0 auto;
+   left: auto;
+   right: auto;
+}
+
+.bottom-nav .nav-item{
+    text-decoration: none;
+}
+
+.bottom-nav .nav-item{
+    font-size: 0.68rem;
+    font-weight: 500;
+}
+
+.text-purple{
+    color:  var(--phonepe-purple) !important;
+}

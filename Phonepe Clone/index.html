@@ -7,16 +7,91 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="script.js"></script>
+    
 </head>
 <body class="bg-light">
-    <div class="container">
+    <div class="app-container">
     <header class= "phonepe-header p-3 text-black d-flex justify-content-between align-items-center">
         <div class="d-flex aligh-items-center gap-3">
-        <h1 class="text-center">PhonePe Clone</h1>
+        <i class="fa-solid fa-user-circle fa-2x"></i>
+        <div>
+            <h6 class="mb-0 fw-bold">Maulik Solanki</h6>
+            <small class="text-black-50">Select Location <i class="fa-solid fa-chevron-down ms-100"></i></small>
+        </div>
+        </div>
+        <div class="d-flex gap-3 fs-5">
+            <i class="fa-solid fa-qrcode"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-circle-question"></i>
+        </div>
+    </header>
+    <main class="pb-3 pb-5">
+        <section class="card border-0 showdow-sm rounded-4 p-3 mb-3"></section>
+        <h6 class="fw-bold mb-3">To Money Transfers</h6>
+        <div class="row row-cols-4 text-center g-2">
+            <div class="col- action-btn" data-title="To Mobile Number">
+                <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+                <small>To Mobile Number</small>
+            </div>
+            <div class="col action-btn" data-title="To Bank / UPI ID">
+                <div class="icon-box"><i class="fa-solid fa-building-columns"></i></div>
+                <small>To Bank / UPI ID</small>            
+            </div>
+            <div class="col action-btn" data-title="To Self Account">
+                <div class="icon-box"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                <small>To Self Account</small>
+            </div>
+            <div class="col action-btn" data-title="Check Balance">
+            <div class="icon-box"><i class="fa-solid fa-wallet"></i></div>
+                <small>Check Balance</small>
+            </div>
+        </div>
+    </section>
+
+<section class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+    <h6 class="fw-bold mb-3">Recharge & Bills</h6>
+    <div class="row row-cols-4 text-center g-2">
+        <div class="col action-btn" data-title="Mobile Recharge">
+            <div class="icon-box"><i class="fa-solid fa-mobile-screen"></i></div>
+            <small>Mobile Recharge</small>
+        </div>
+        <div class="col action-btn" data-title="DTH Recharge">
+            <div class="icon-box"><i class="fa-solid fa-tv"></i></div>
+            <small>DTH Recharge</small>
+        </div>
+        <div class="col action-btn" data-title="Electricity Bill">
+            <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+            <small>Electricity Bill</small>
+        </div>
+        <div class="col action-btn" data-title="Water Bill">
+            <div class="icon-box"><i class="fa-solid fa-tint"></i></div>
+            <small>Water Bill</small>
         </div>
     </div>
-</body>
-
+</section>
+</main>
+<nav class="bottom-nav fixed-bottom bg-white border-top d-flex justify-content-around align-items-center py-2">
+    <a href="#" class="nav-item text-center text-purple">
+        <i class="fa-solid fa-house d-block fs-5"></i>
+        <span>Home</span>
+    </a>
+    <a href="#" class="nav-item text-center text-muted">
+        <i class="fa-solid fa-store d-block fs-5"></i>
+        <span>Stores</span>
+    </a>
+    <a href="#" class="nav-item text-center text-muted">
+        <i class="fa-solid fa-shield-alt d-block fs-5"></i>
+        <span>Insaurance</span> 
+    </a>
+    <a href="#" class="nav-item text-center text-muted">
+        <i class="fa-solid fa-indian-rupee-sign d-block fs-5"></i>
+        <span>Wealth</span>
+    </a>    
+    <a href="#" class="nav-item text-center text-muted">
+        <i class="fa-solid d-block fa-user fs-5"></i>
+        <span>Account</span>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
